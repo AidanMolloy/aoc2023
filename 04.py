@@ -1,6 +1,4 @@
-from utils import readInput
-
-inputList = readInput("input.txt")
+from utils import runner
 
 def findMatches(card):
   winning_nums, your_nums = card.split(':')[1].split('|')
@@ -28,5 +26,4 @@ def part2(inputList):
   return sum(scratchcards)
 
 if __name__ == "__main__":
-    print("Part 1: ", part1(inputList))
-    print("Part 2: ", part2(inputList))
+    runner(part1, part2)
