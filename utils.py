@@ -10,7 +10,7 @@ def readInput(filename):
       inputList.append(line.rstrip())
   return inputList
 
-def runner(part1, part2):
+def runner(part1, part2, sample2=None):
   print("----------------------------------------------")
   print(f"Part 1 - Sample answer: {part1(readInput('sample.txt'))}")
   time_start = perf_counter()
@@ -18,7 +18,7 @@ def runner(part1, part2):
   time_stop = perf_counter()
   print(f"Part 1 - Answer:        {result} ({time_stop-time_start:.4f}s)")
   print("----------------------------------------------")
-  print(f"Part 2 - Sample answer: {part2(readInput('sample.txt'))}")
+  print(f"Part 2 - Sample answer: {part2(readInput(sample2 if sample2 else 'sample.txt'))}")
   time_start = perf_counter()
   result = part2(readInput('input.txt'))
   time_stop = perf_counter()
